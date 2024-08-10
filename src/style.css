@@ -19,6 +19,7 @@
   --bg-color: #fff;
 }
 
+/* General Settings */
 section {
   padding: 4.5rem 0 1.5rem;
 }
@@ -31,6 +32,8 @@ body {
   color: var(--text-color);
 }
 
+/* Header */
+
 header {
   position: fixed;
   width: 100%;
@@ -41,7 +44,7 @@ header {
   align-items: center;
   justify-content: space-between;
   background: var(--bg-color);
-  box-shadow: 0 8px 11px rgb(14, 55, 54,  15%);
+  box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
   padding: 20px 100px;
   transition: 0.5s;
 }
@@ -73,6 +76,7 @@ header {
   font-weight: 600;
   color: var(--text-color);
   column-gap: 0.5rem;
+  margin-right: 30px;
 }
 
 .logo .bx {
@@ -106,12 +110,14 @@ header {
   display: none;
 }
 
-.container {
+/* Home */
+.swiper-slide.container {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   min-height: 640px;
   display: flex;
   align-items: center;
+  /* justify-content: center; */
   background: url(./images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -119,9 +125,77 @@ header {
   overflow: hidden;
 }
 
-.container > img {
+.swiper-slide.container img {
   width: 400px;
   position: absolute;
   /* bottom: -500px; */
-  right: 200px;
+  right: 100px; 
+  
+}
+
+.home-text {
+  padding: 0 150px;
+}
+
+.home-text span {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--green-color);
+}
+
+.home-text h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  background: var(--green-color);
+  color: var(--bg-color);
+  font-weight: 400;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 0.5rem;
+  max-width: 160px;
+}
+
+.btn .bx {
+  padding: 4px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 1rem;
+  font-size: 20px;
+  margin: auto;
+}
+
+.btn:hover {
+  background: var(--light-orange-color);
+  transition: 0.2s ease;
+}
+
+.swiper-button-next {
+  background: url(images/right-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  margin-right: 20px;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  background: url(images/left-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  margin-left: 20px;
+}
+
+.swiper-button-prev::after {
+  display: none;
 }
